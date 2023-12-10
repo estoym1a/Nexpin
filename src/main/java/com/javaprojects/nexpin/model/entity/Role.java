@@ -13,16 +13,9 @@ import lombok.experimental.FieldDefaults;
 @NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Builder
-public class Client {
+public class Role {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
-    String userName;
-    String fullName;
-    String email;
-    String phoneNumber;
-    String password;
-    Role role;
-    Boolean is_active;
-
+    String name;//User or Admin
 }
