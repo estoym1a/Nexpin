@@ -19,6 +19,6 @@ public class TransactionType {
     String name; //APTEK
     String category; //Mexaric Medaxil
 
-    @OneToMany(mappedBy="transactionType")
+    @OneToMany(mappedBy = "transactionType")
     List<Transaction> transactions;
 }

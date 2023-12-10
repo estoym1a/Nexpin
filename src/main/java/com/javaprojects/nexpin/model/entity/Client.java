@@ -25,6 +25,6 @@ public class Client {
     Role role;
     Boolean is_active;
 
-    @OneToMany(mappedBy= "client")
+    @OneToMany(mappedBy = "client")
     List<Account> accounts;
 }
