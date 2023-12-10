@@ -1,11 +1,10 @@
 package com.javaprojects.nexpin.model.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
+
+import java.util.List;
 
 @Entity
 @Data
@@ -21,4 +20,14 @@ public class Account {
     Double balance;
     String currency;
     Boolean is_active;
+    @ManyToOne
+    @JoinColumn(name="client_id")
+    Client client;
+
+    @OneToMany(mappedBy="account")
+    List<Card> cards;
+
+    @OneToMany(mappedBy = "account")
+    List<Transaction> transactions;
+
 }

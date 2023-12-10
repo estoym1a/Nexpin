@@ -1,9 +1,6 @@
 package com.javaprojects.nexpin.model.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
@@ -25,6 +22,14 @@ public class Card {
     String pan; //16-digit number
     Integer cvc;
     Boolean is_active;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    Client client;
+
+    @ManyToOne
+    @JoinColumn(name = "account_id")
+    Account account;
 
 
 }

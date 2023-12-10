@@ -1,9 +1,6 @@
 package com.javaprojects.nexpin.model.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
@@ -21,4 +18,12 @@ public class Transaction {
     Long id;
     Double amount;
     LocalDate transaction_date;
+    @ManyToOne
+    @JoinColumn(name = "account_id")
+    Account account;
+
+
+    @ManyToOne
+    @JoinColumn(name = "transaction_type_id")
+    TransactionType transactionType;
 }

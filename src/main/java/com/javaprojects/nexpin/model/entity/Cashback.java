@@ -1,9 +1,6 @@
 package com.javaprojects.nexpin.model.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
@@ -18,6 +15,13 @@ public class Cashback {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
     Double refund_amount;
+    @ManyToOne
+    @JoinColumn(name = "transaction_id")
+    Transaction transaction;
+
+    @ManyToOne
+    @JoinColumn(name = "account_id")
+    Account account;
 
 }
 

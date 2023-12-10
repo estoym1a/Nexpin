@@ -1,11 +1,10 @@
 package com.javaprojects.nexpin.model.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
+
+import java.util.List;
 
 @Entity
 @Data
@@ -18,4 +17,6 @@ public class Service {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
     String organization_name;String service_name;
+    @OneToMany(mappedBy="service")
+    List<Transaction> transactions;
 }

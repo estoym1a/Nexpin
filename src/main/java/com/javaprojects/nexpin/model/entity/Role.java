@@ -1,11 +1,10 @@
 package com.javaprojects.nexpin.model.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
+
+import java.util.List;
 
 @Entity
 @Data
@@ -18,4 +17,6 @@ public class Role {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
     String name;//User or Admin
+    @OneToMany(mappedBy = "role")
+    List<Client> clients;
 }
