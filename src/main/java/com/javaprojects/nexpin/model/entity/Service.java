@@ -13,9 +13,9 @@ import lombok.experimental.FieldDefaults;
 @NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Builder
-public class TransactionDetails {
+public class Service {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
-    String organization_service_code; //azerisiq abonent kodu, bazada saxlanilmir
+    String organization_name;String service_name;
 }
