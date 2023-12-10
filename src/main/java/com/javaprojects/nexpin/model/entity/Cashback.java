@@ -20,4 +20,4 @@ public class Cashback {
     Double refund_amount;
 
 }
-transaction_id, refund_amount, account_id)
+
