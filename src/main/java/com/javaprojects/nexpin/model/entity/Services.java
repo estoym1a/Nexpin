@@ -17,6 +17,6 @@ public class Services {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
     String organization_name;String service_name;
-    @OneToMany(mappedBy="service")
-    List<Transaction> transactions;
+    @OneToMany(mappedBy="services")
+    List<TransactionDetails> transactionDetails;
 }

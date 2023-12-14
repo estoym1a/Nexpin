@@ -17,6 +17,10 @@ public class TransactionDetails {
     String organization_service_code; //azerisiq abonent kodu, bazada saxlanilmir
 
     @ManyToOne
-    @JoinColumn(name = "transactions_id")
-    Transaction transactions;
+    @JoinColumn(name = "transaction_id")
+    Transaction transaction;
+
+    @ManyToOne
+    @JoinColumn(name = "services_id")
+    Services services;
 }
