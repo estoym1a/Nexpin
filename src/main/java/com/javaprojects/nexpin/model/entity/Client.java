@@ -28,5 +28,6 @@ public class Client {
     List<Account> accounts;
 
     @ManyToOne
+    @JoinColumn(name ="role_id")
     Role role;
 }

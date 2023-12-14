@@ -26,4 +26,5 @@ public class Transaction {
     @ManyToOne
     @JoinColumn(name = "transaction_type_id")
     TransactionType transactionType;
+
 }
