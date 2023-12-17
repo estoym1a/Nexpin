@@ -7,4 +7,8 @@ public class Constants {
     public final static String EMAIL_IS_NOT_VALID="Enter a Valid Email";
     public final static String PASSWORD_URGENT="Enter Password";
     public final static String PASSWORD_REGEX = "Enter at least 8 characters. At least one uppercase letter, one number, and one special character.";
+    public final static String ID_URGENT="Enter Id";
+    public final static String ACCOUNT_TYPE_URGENT="Enter Account Type";
+    public final static String CURRENCY_URGENT="Enter Currency";
+
 }
