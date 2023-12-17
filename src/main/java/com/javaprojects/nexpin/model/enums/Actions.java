@@ -1,4 +1,4 @@
-package com.javaprojects.nexpin.enums;
+package com.javaprojects.nexpin.model.enums;
 
 public enum Actions {
     ACTIVATE,

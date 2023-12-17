@@ -1,6 +1,6 @@
 package com.javaprojects.nexpin.model.dto.request;
 
-import com.javaprojects.nexpin.enums.Actions;
+import com.javaprojects.nexpin.model.enums.Actions;
 import jakarta.validation.constraints.NotBlank;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
