@@ -29,6 +29,6 @@ public class Transaction {
     TransactionType transactionType;
 
     @OneToMany(mappedBy = "transaction")
-    List<TransactionDetails> transactionDetails;
+    List<TransactionDetails> transactionDetails ;
 
 }
