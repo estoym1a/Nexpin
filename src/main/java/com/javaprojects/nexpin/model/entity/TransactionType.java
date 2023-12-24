@@ -16,7 +16,7 @@ public class TransactionType {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
-    String name; //APTEK
+    String transaction_name; //APTEK
     String category; //deposit and withdrawal - create enum if needed
 
     @OneToMany(mappedBy = "transactionType")
