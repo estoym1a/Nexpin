@@ -1,4 +1,4 @@
 package com.javaprojects.nexpin.service;
 
-public interface UserService {
+public interface ClientService {
 }
