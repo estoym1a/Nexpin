@@ -30,8 +30,7 @@ public class Account {
     @OneToMany(mappedBy = "account")
     List<Transaction> transactions;
 
-    @ManyToOne
-    @JoinColumn(name = "account_type_id")
-    AccountType accountType;
+  
+
 
 }
