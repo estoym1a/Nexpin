@@ -16,6 +16,7 @@ public class Constants {
     public final static String CLIENT_ID_URGENT="Enter Client Id";
     public final static String ACTION_URGENT="Enter an Action Type";
     public final static String EXCEED_LIMIT="The amount cannot exceed 1000.";
+    public final static String EMAIL_URGENT="Enter Email Address";
 
 
 
