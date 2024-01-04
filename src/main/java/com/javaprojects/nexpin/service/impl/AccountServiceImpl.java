@@ -1,0 +1,49 @@
+package com.javaprojects.nexpin.service.impl;
+
+import com.javaprojects.nexpin.model.entity.Account;
+import com.javaprojects.nexpin.repository.AccountRepository;
+import com.javaprojects.nexpin.service.AccountService;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+@Service
+@RequiredArgsConstructor
+public class AccountServiceImpl implements AccountService {
+
+    private final AccountRepository accountRepository;
+    @Override
+    public Account createAccount(Account account) {
+        return null;
+    }
+
+    @Override
+    public Account updateAccount(Long accountId, Account account) {
+        return null;
+    }
+
+    @Override
+    public void deleteAccount(Long accountId) {
+
+    }
+
+    @Override
+    public Account getAccountById(Long accountId) {
+        return null;
+    }
+
+    @Override
+    public List<Account> getAllAccountsForClients(Long ClientId) {
+        return null;
+    }
+
+    @Override
+    public Account deposit(Long accountId, Double amount) {
+        return null;
+    }
+
+    @Override
+    public Account withdraw(Long accountId, Double amount) {
+        return null;
+    }
+}

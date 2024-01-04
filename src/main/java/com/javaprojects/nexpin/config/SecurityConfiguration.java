@@ -24,7 +24,7 @@ public class SecurityConfiguration {
         http
                 .csrf(customizer -> customizer.disable())
                 .authorizeRequests(authorize -> authorize
-                        .requestMatchers("/api/v1/auth/**").permitAll()
+                        .requestMatchers("/api/v1/nexpin/auth/**").permitAll()
                         .anyRequest().authenticated())
                 .securityContext(context ->
                         context.securityContextRepository(new NullSecurityContextRepository()))

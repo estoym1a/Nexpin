@@ -4,9 +4,7 @@ import com.javaprojects.nexpin.model.entity.TransactionType;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 import org.springframework.validation.annotation.Validated;
-
-import java.time.LocalDate;
-import java.time.LocalDateTime;
+import java.util.Date;
 
 @Data
 @Builder
@@ -19,6 +17,6 @@ public class TransactionResponse {
     Long acc_id;
     Double amount;
     TransactionType transactionType;
-    LocalDateTime transactionDate;
+    Date transactionDate;
 
 }

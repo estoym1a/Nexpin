@@ -6,7 +6,8 @@ import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
-import java.time.LocalDate;
+import java.util.Date;
+
 
 @Entity
 @Data
@@ -19,8 +20,8 @@ public class Card {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
     String card_name;
-    LocalDate expire_month;
-    LocalDate expire_year;
+    Date expire_month;
+    Date expire_year;
     String pan; //16-digit number
     Integer cvc;
 
