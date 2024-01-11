@@ -22,11 +22,11 @@ public class Client implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
-    String userName;
-    String fullName;
-    String email;
+    String fullName; //firstname,lastname
     String phoneNumber;
     String password;
+    String finCode;
+    String serialNumber;
     Boolean is_active;
 
     @Enumerated(EnumType.STRING)
@@ -42,7 +42,7 @@ public class Client implements UserDetails {
 
     @Override
     public String getUsername() {
-        return userName;
+        return this.fullName;
     }
 
     @Override

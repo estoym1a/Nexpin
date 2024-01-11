@@ -17,11 +17,7 @@ import static com.javaprojects.nexpin.model.constant.Constants.*;
 @AllArgsConstructor
 @Validated
 public class LoginClientRequest {
-    @NotBlank(message = USERNAME_URGENT)
-    String userName;
-    @NotNull(message = EMAIL_URGENT)
-    @Email(message = EMAIL_IS_NOT_VALID)
-    String email;
+
     @NotNull(message = FULLNAME_URGENT)
     String fullName;
 

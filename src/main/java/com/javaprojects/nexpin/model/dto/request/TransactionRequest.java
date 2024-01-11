@@ -17,14 +17,14 @@ import static com.javaprojects.nexpin.model.constant.Constants.*;
 @Validated
 public class TransactionRequest {
     @NotBlank(message = ACCOUNT_ID_URGENT)
-Long acc_id;
+    Long acc_id;
     @NotBlank(message = AMOUNT_URGENT)
-Double amount;
+    Double amount;
     @Max(value = 1000, message = EXCEED_LIMIT)
     @NotBlank(message = TRANSACTION_TYPE_URGENT)
-TransactionType transactionType;
+    TransactionType transactionType;
     @NotBlank(message = CURRENCY_URGENT)
-String currency;
+    String currency;
 
 
 }

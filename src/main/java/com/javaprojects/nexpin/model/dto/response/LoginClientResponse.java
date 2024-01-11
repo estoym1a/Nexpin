@@ -12,7 +12,7 @@ import org.springframework.validation.annotation.Validated;
 @Validated
 public class LoginClientResponse {
     Long id;
-    String userName;
+    String fullName;
     String token;
 
 }

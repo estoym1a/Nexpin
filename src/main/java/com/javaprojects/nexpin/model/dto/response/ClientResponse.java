@@ -10,9 +10,6 @@ import lombok.experimental.FieldDefaults;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class ClientResponse {
     Long id;
-    String userName;
     String fullName;
-    String email;
-    String phoneNumber;
     Boolean is_active;
 }

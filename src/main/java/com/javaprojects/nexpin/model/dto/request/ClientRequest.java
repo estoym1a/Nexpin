@@ -16,15 +16,11 @@ import static com.javaprojects.nexpin.model.constant.Constants.*;
 @AllArgsConstructor
 @Validated
 public class ClientRequest {
-    @NotBlank(message = USERNAME_URGENT)
-    String userName;
+
 
     @NotBlank(message = FULLNAME_URGENT)
     String fullName;
 
-    @NotBlank(message = EMAIL_IS_NOT_VALID)
-    @Email(message = EMAIL_IS_NOT_VALID)
-    String email;
 
     @Pattern(regexp = "^(\\+[0-9]{1,4}[-.\\s]?)?((\\([0-9]{1,4}\\))|[0-9]{1,4})[-.\\s]?[0-9]{1,14}$",
             message = INVALID_PHONE)
