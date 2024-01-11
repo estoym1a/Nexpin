@@ -3,13 +3,11 @@ package com.javaprojects.nexpin.service;
 import com.javaprojects.nexpin.model.entity.Client;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface ClientService {
-    Client registerNewClient(Client client);
 
-    Client updateClientDetails(Long ClientId, Client client);
-
-    void deleteClient(Long ClientId);
+    Client updateClientParameter(Long clientId, String fieldName, Object updatedValue);
 
     Client getClientById(Long ClientId);
 
