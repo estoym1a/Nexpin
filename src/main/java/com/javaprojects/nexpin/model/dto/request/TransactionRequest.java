@@ -1,6 +1,6 @@
 package com.javaprojects.nexpin.model.dto.request;
 
-import com.javaprojects.nexpin.model.entity.TransactionType;
+import com.javaprojects.nexpin.model.enums.TransactionType;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.NotBlank;
 import lombok.*;
