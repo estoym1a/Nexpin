@@ -21,16 +21,17 @@ public class Account {
     String currency;
     Boolean is_active;
     @ManyToOne
-    @JoinColumn(name="client_id")
+    @JoinColumn(name = "client")
     Client client;
 
-    @OneToMany(mappedBy="account")
+    @Column(name = "client_id")
+    Long clientId;
+
+    @OneToMany(mappedBy = "account")
     List<Card> cards;
 
     @OneToMany(mappedBy = "account")
     List<Transaction> transactions;
-
-  
 
 
 }
