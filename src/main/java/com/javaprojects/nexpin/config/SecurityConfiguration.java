@@ -26,8 +26,12 @@ public class SecurityConfiguration {
         http
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeRequests(authorize -> authorize
-                        .requestMatchers("/nexpin/account//{accountId").hasRole("ADMIN")
-                        .requestMatchers("/nexpin/card/**").hasRole("ADMIN")
+                        .requestMatchers("/api/v1/auth/**").permitAll()
+                        .requestMatchers("/nexpin/client/**").permitAll()
+                        .requestMatchers("/nexpin/account/**").permitAll()
+                        .requestMatchers("/nexpin/transaction/**").permitAll()
+                        .requestMatchers("/nexpin/services/**").permitAll()
+                        .requestMatchers("/nexpin/cashback/**").permitAll()
                         .anyRequest().authenticated())
                 .securityContext(context ->
                         context.securityContextRepository(new NullSecurityContextRepository()))
