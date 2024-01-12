@@ -1,6 +1,7 @@
 package com.javaprojects.nexpin.handler;
 
 import com.javaprojects.nexpin.exception.AccountNotFoundException;
+import com.javaprojects.nexpin.exception.CardNotFoundException;
 import com.javaprojects.nexpin.exception.NoClientsFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,6 +21,12 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(NoClientsFoundException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
     public ResponseEntity<String> handleNoClientsFoundException(NoClientsFoundException ex) {
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ex.getMessage());
+    }
+
+    @ExceptionHandler(CardNotFoundException.class)
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    public ResponseEntity<String> handleCardNotFoundException(CardNotFoundException ex) {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ex.getMessage());
     }
 }

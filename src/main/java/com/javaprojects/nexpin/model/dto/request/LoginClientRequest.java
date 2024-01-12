@@ -1,6 +1,5 @@
 package com.javaprojects.nexpin.model.dto.request;
 
-import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
@@ -8,7 +7,7 @@ import lombok.*;
 import lombok.experimental.FieldDefaults;
 import org.springframework.validation.annotation.Validated;
 
-import static com.javaprojects.nexpin.model.constant.Constants.*;
+import static com.javaprojects.nexpin.model.constant.Messages.*;
 
 @Data
 @Builder

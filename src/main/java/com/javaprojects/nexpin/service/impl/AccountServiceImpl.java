@@ -11,6 +11,9 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+import static com.javaprojects.nexpin.model.constant.Messages.INVALID_DEPOSIT;
+import static com.javaprojects.nexpin.model.constant.Messages.INVALID_WITHDRAWAL;
+
 @Service
 @RequiredArgsConstructor
 @Transactional
@@ -52,7 +55,7 @@ public class AccountServiceImpl implements AccountService {
                         account.setBalance(account.getBalance() + amount);
                         return accountRepository.save(account);
                     } else {
-                        throw new IllegalArgumentException("Deposit amount must be positive");
+                        throw new IllegalArgumentException(INVALID_DEPOSIT);
                     }
                 })
                 .orElseThrow(() -> new AccountNotFoundException("Account not found with id: " + accountId));
@@ -70,7 +73,7 @@ public class AccountServiceImpl implements AccountService {
                         account.setBalance(account.getBalance() - amount);
                         return accountRepository.save(account);
                     } else {
-                        throw new IllegalArgumentException("Invalid withdrawal amount or insufficient balance");
+                        throw new IllegalArgumentException(INVALID_WITHDRAWAL);
                     }
                 })
                 .orElseThrow(() -> new AccountNotFoundException("Account not found with id: " + accountId));
