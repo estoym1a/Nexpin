@@ -1,5 +1,6 @@
 package com.javaprojects.nexpin.model.dto.request;
 
+import com.javaprojects.nexpin.model.enums.AccountType;
 import jakarta.validation.constraints.NotBlank;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
@@ -19,4 +20,7 @@ public class AccountCreationRequest {
 
     @NotBlank(message = CURRENCY_URGENT)
     String currency;
+
+    @NotBlank(message = ACCOUNT_TYPE_URGENT) // select bar
+    AccountType accountType;
 }
