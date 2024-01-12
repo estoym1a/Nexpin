@@ -26,8 +26,8 @@ public class SecurityConfiguration {
         http
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeRequests(authorize -> authorize
-                        .requestMatchers("/api/v1/auth/**").permitAll()
-                        .requestMatchers("/admin/**").hasRole("ADMIN")
+                        .requestMatchers("/nexpin/account//{accountId").hasRole("ADMIN")
+                        .requestMatchers("/nexpin/card/**").hasRole("ADMIN")
                         .anyRequest().authenticated())
                 .securityContext(context ->
                         context.securityContextRepository(new NullSecurityContextRepository()))

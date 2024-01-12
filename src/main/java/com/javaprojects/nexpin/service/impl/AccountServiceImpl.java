@@ -36,7 +36,7 @@ public class AccountServiceImpl implements AccountService {
     }
 
     @Override
-    public List<Account> getAllAccountsForClients(Long clientId) {
+    public List<Account> getAllAccountsForClient(Long clientId) {
         return accountRepository.findByClientId(clientId);
     }
 

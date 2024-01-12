@@ -11,7 +11,7 @@ public interface AccountService {
 
     Account getAccountById(Long accountId);
 
-    List<Account> getAllAccountsForClients(Long ClientId);
+    List<Account> getAllAccountsForClient(Long ClientId);
 
     Account deposit(Long accountId, Double amount);
 
