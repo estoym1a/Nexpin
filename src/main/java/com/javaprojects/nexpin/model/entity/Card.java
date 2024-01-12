@@ -26,7 +26,7 @@ public class Card {
     Integer cvc;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "action ")
+    @Column(name = "action")
     Actions action;
 
     @Enumerated(EnumType.STRING)
